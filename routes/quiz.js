@@ -2,15 +2,6 @@ var express = require('express');
 var axios = require('axios');
 var router = express.Router();
 
-// Decode function to unescape HTML entities
-function decode(str) {
-  return str.replace(/&quot;/g, '"')
-            .replace(/&#039;/g, "'")
-            .replace(/&amp;/g, '&')
-            .replace(/&lt;/g, '<')
-            .replace(/&gt;/g, '>');
-}
-
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -25,7 +16,6 @@ router.get('/', async (req, res) => {
     let questions = resp.data.results;
     const correctAnswers = questions.map(question => decode(question.correct_answer));
     questions = questions.map(question => {
-      question.question = decode(question.question);
       const answers = [...question.incorrect_answers, question.correct_answer];
       question.answers = shuffle(answers);
       return question;
