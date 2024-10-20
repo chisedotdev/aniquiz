@@ -1,0 +1,109 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    padding: 20px 30px 20px 30px;
+}
+
+.quiz-container {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-violet {
+    color: var(--violet);
+}
+
+.form-btns {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-btns > button {
+    padding: 10px 20px 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.form-btns > .clear-btn {
+    background-color: var(--red);
+}
+
+.form-btns > .clear-btn:hover {
+    background-color: var(--dark-red);
+}
+
+.form-btns > .submit-btn {
+    margin-top: 10px;
+    background-color: var(--violet);
+}
+
+.form-btns > .submit-btn:hover {
+    background-color: var(--dark-violet);
+}
+
+form > div.quiz-container:nth-child(even) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* RADIO BUTTON STYLE / CHOICES */
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    border: 2px solid var(--violet);
+    border-radius: 10px;
+    color: var(--violet);
+    padding: 10px 20px 10px 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+label:hover {
+    background-color: var(--violet);
+    color: var(--white);
+}
+
+/* Style for selected (checked) radio buttons */
+input[type="radio"]:checked + label {
+    background-color: var(--violet);
+    color: var(--white);
+    border-color: var(--violet);
+}
+
+/* CSS FOR DESKTOP */
+@media only screen and (min-width: 768px) {
+    .choices {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .form-btns {
+        flex-direction: row;
+    }
+
+    .form-btns > .clear-btn {
+        width: 100%;
+    }
+
+    .form-btns > .submit-btn {
+        margin-top: 0;
+        margin-left: 10px;
+        width: 100%;
+    }
+}

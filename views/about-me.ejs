@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/nav.css' />
+    <link rel='stylesheet' href='/stylesheets/footer.css' />
+    <link rel='stylesheet' href='/stylesheets/base.css' />
+    <link rel='stylesheet' href='/stylesheets/about-me.css' />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <%- include('partials/nav.ejs') %>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="main-img">
+            <img src="/images/about-me/ako.jpg" alt="picture">
+        </div>
+        <div class="main-txt">
+            <h1>Hi, I am [<span class="txt-violet">redacted</span>]</h1>
+            <p>I chose Japanese manga and anime as my quiz category because it's a huge part of my life and something I'm genuinely passionate about. It's not just entertainment for me—it's a unique blend of art, storytelling, and culture that sparks my imagination and curiosity. Manga and anime have taught me valuable lessons, introduced me to diverse characters, and transported me to worlds filled with adventure and emotion. Through this quiz, I hope to share that excitement and appreciation with others, helping them discover or deepen their understanding of this vibrant aspect of Japanese culture.</p>
+        </div>
+    </main>
+    <!-- FOOTER -->
+     <%- include('partials/footer.ejs') %>
+     <script src="/javascripts/nav.js"></script>
+  </body>
+</html>

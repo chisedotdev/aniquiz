@@ -1,0 +1,70 @@
+footer {
+    background-color: var(--violet);
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px 20px 30px;
+}
+
+.footer-socmed-links, .footer-links, .copyright {
+    padding-bottom: 15px;
+}
+
+.footer-socmed-links > a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer-links {
+    padding-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links > a {
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid var(--violet);
+    transition: 0.3s ease-in-out;
+}
+
+.footer-links > a:hover {
+  border-bottom: 1px solid var(--white);
+  color: var(--gray);
+}
+
+.copyright {
+    border-top: 1px solid var(--white);
+    padding-top: 15px;
+    color: var(--black);
+}
+
+.copyright > p > a {
+    color: var(--white);
+    transition: 0.3s ease-in-out;
+}
+
+.copyright > p > a:hover {
+    color: var(--gray);
+}
+
+.copyright > p {
+    letter-spacing: 1px;
+}
+
+/* CSS FOR DESKTOP */
+@media only screen and (min-width: 768px) {
+    .footer-links {
+        flex-direction: row;
+    }
+
+    .footer-links > a {
+        padding: 0 15px 5px 15px;
+    }
+
+    .copyright > p {
+        letter-spacing: 2px;
+    }
+}

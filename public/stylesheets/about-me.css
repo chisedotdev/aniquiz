@@ -1,0 +1,67 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    padding: 20px 30px 20px 30px;
+}
+
+.main-img {
+    background: red;
+    height: 500px;
+}
+
+.main-img > img {
+    height: 100%;
+    width: 100%;
+}
+
+.main-txt {
+    background-color: var(--white);
+    padding: 20px;
+    border-top: 1px solid var(--violet);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.main-txt > h1 {
+    padding: 0 0 20px 0;
+}
+
+.main-txt > p {
+    text-align: justify;
+    line-height:30px;
+}
+
+.txt-violet {
+    color: var(--violet);
+}
+
+/* CSS FOR DESKTOP */
+@media only screen and (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+    }
+
+    .main-img {
+        width: 50%;
+    }
+
+    .main-txt > h1 {
+        font-size: 3rem;
+    }
+
+    .main-txt {
+        border-left: 1px solid var(--violet);
+        border-top: 0;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 20px;
+        width: 100%;
+    }
+
+    .main-txt > p {
+        text-align: justify;
+        line-height:35px;
+        font-size: 1.2rem;
+    }
+}

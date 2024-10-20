@@ -1,0 +1,44 @@
+.main-content {
+    background: url('/images/landing/banner.jpeg');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+}
+
+.main-txt {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-txt > h1 {
+    -webkit-text-stroke: 3px var(--black);
+    padding-bottom: 40px;
+    color: var(--black);
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.main-txt > a {
+    background-color: var(--violet);
+    padding: 20px 60px 20px 60px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.main-txt > a:hover {
+    background-color: var(--dark-violet);
+}
+
+@media only screen and (min-width: 768px) {
+    .main-txt > h1 {
+        font-size: 3.6rem;
+    }
+}

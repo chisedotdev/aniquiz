@@ -1,0 +1,24 @@
+:root {
+    --white: #ffffff;
+    --violet: #5145e5;
+    --gray: #ebebeb;
+    --black: #171717;
+    --dark-violet: #3d33ae;
+    --red: #e54545;
+    --dark-red: #d33a3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}

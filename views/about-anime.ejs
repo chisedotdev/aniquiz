@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/nav.css' />
+    <link rel='stylesheet' href='/stylesheets/footer.css' />
+    <link rel='stylesheet' href='/stylesheets/base.css' />
+    <link rel='stylesheet' href='/stylesheets/about-me.css' />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <%- include('partials/nav.ejs') %>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="main-img">
+            <img src="/images/about-anime/pun.jpg" alt="picture">
+        </div>
+        <div class="main-txt">
+            <h1>Japanese Anime <span class="txt-violet">&</span> Manga</h1>
+            <p>Japanese anime and manga have deep cultural roots, both evolving into global phenomena over the years.
+
+<span class="txt-violet"><b>Manga</b></span> as we know it today began in the late 1940s, influenced heavily by Osamu Tezuka's work, particularly Astro Boy. It became a major form of entertainment in Japan, spanning genres for all age groups.
+
+<span class="txt-violet"><b>Anime</b></span> started in the early 20th century, with the first known Japanese animated film in 1917. Tezuka's Astro Boy also helped shape modern anime, making its debut in 1963 as Japan’s first major TV anime. By the 1980s and 90s, anime series like Dragon Ball Z and Sailor Moon gained international popularity.
+
+Today, both anime and manga continue to captivate global audiences, with series like Naruto and My Hero Academia keeping the tradition alive and growing.</p>
+        </div>
+    </main>
+    <!-- FOOTER -->
+     <%- include('partials/footer.ejs') %>
+     <script src="/javascripts/nav.js"></script>
+  </body>
+</html>

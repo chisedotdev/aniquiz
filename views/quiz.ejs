@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/nav.css' />
+    <link rel='stylesheet' href='/stylesheets/footer.css' />
+    <link rel='stylesheet' href='/stylesheets/base.css' />
+    <link rel='stylesheet' href='/stylesheets/quiz.css' />
+    <link rel='stylesheet' href='/stylesheets/modal.css' />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <%- include('partials/nav.ejs'); %>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <form action="#" method="POST">
+          <% if(questions.length > 0) { %>
+            <% questions.forEach((question, number) => { %>
+              <div class="quiz-container">
+                  <h3 class="question"><%= number + 1 %>. <%- question.question %></h3>
+                  <div class="choices">
+                    <% question.answers.forEach((answer) => { %>
+                      <input type="radio" id="<%= answer %>" name="question-<%= number + 1 %>" value="<%= answer %>">
+                      <label for="<%= answer %>"><%- answer %></label>
+                    <% }); %>
+                  </div>
+              </div>
+              <% }); %>
+            <% } else { %>
+              <h1>No questions available yet.</h1>
+            <% } %>
+            <div class="form-btns">
+                <button class="clear-btn">Clear Answers</button>
+                <button type="submit" class="submit-btn">Submit Quiz</button>
+            </div>
+        </form>
+    </main>
+    <!-- MODAL -->
+     <%- include('partials/modal.ejs'); %>
+    <!-- FOOTER -->
+     <%- include('partials/footer.ejs'); %>
+     <script>
+        const correctAnswers = <%- JSON.stringify(correctAnswers) %>;
+     </script>
+     <script src="/javascripts/nav.js"></script>
+     <script src="/javascripts/quiz.js"></script>
+  </body>
+</html>

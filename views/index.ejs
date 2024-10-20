@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/nav.css' />
+    <link rel='stylesheet' href='/stylesheets/footer.css' />
+    <link rel='stylesheet' href='/stylesheets/base.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <%- include('partials/nav.ejs') %>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="main-txt">
+        <h1>READY TO TEST YOUR KNOWLEDGE?</h1>
+        <a href="/quiz">take a quiz</a>
+      </div>
+    </main>
+    <!-- FOOTER -->
+     <%- include('partials/footer.ejs') %>
+     <script src="/javascripts/nav.js"></script>
+  </body>
+</html>

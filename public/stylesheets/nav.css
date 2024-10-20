@@ -1,0 +1,84 @@
+nav {
+  background-color: var(--violet);
+  padding: 10px 30px 10px 30px;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+nav > div > .logo {
+  padding-bottom: 10px;
+  transition: 0.3s ease-in-out;
+  font-weight: bolder;
+}
+
+nav > div > .logo:hover {
+  color: var(--gray);
+}
+
+#navlinks {
+  display: none;
+  flex-direction: column;
+}
+
+#navlinks > a {
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: 0.3s ease-in-out;
+  border-bottom: 1px solid var(--violet);
+}
+
+#navlinks > a:hover {
+  border-bottom: 1px solid var(--white);
+  color: var(--gray);
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-line {
+  height: 3px;
+  width: 30px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+nav > .mobile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlinks-show {
+  display: flex !important;
+}
+
+/* CSS FOR DESKTOP */
+@media only screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 60px 20px 60px;
+    align-items: center;
+  }
+
+  nav > div > .logo {
+    padding-bottom: 0;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  #navlinks {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #navlinks > a {
+    padding: 10px 30px 10px 30px;
+  }
+}

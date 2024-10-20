@@ -1,0 +1,101 @@
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--white);
+    border: 2px solid var(--gray);
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content > * {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modal-content > h1 {
+    font-size: 3.3rem;
+}
+
+.modal-content > p {
+    font-size: 2.1rem;
+}
+
+.modal-btns {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid var(--violet);
+    padding-top: 20px;
+}
+
+.modal-btns > a {
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.go-home {
+    background-color: var(--red);
+}
+
+.play-again {
+    background-color: var(--violet);
+}
+
+.go-home:hover {
+    background-color: var(--dark-red);
+}
+
+.play-again:hover {
+    background-color: var(--dark-violet);
+}
+
+.modal-btns > a:nth-child(even) {
+    margin-top: 10px;
+}
+
+.violet-text {
+    color: var(--violet);
+}
+
+/* CSS FOR DESKTOP */
+@media only screen and (min-width: 768px) {
+    .modal-content {
+        width: 500px;
+    }
+
+    .modal-btns {
+        flex-direction: row;
+    }
+
+    .modal-btns > a {
+        width: 100%;
+    }
+
+    .modal-btns > a:nth-child(even) {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+}
