@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
   try {
     const resp = await axios.get('https://opentdb.com/api.php?amount=10&category=31&type=multiple');
     let questions = resp.data.results;
-    const correctAnswers = questions.map(question => decode(question.correct_answer));
+    const correctAnswers = questions.map(question => question.correct_answer);
     questions = questions.map(question => {
       const answers = [...question.incorrect_answers, question.correct_answer];
       question.answers = shuffle(answers);
